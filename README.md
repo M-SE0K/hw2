@@ -1,5 +1,35 @@
-# Vue 3 + TypeScript + Vite
+# 한가위(추석) 소개 페이지
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 개요
+이 프로젝트는 초급프로젝트 과제2 Vue 3 + TypeScript + Vite 기반의 정적 랜딩 페이지입니다.  
+주제는 "한가위(추석)"이고, 다음과 같은 콘텐츠 섹션을 포함합니다:
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 파일 구조 (중요 파일)
+- `src/App.vue`  
+  한가위 랜딩 페이지 전체 UI, 텍스트, 이미지, 스타일이 모두 들어 있습니다.
+
+- `README.md`  
+  요구사항에 따라 콘텐츠를 생성한 프롬프트를 명시하고, 구성 의도와 사용 가이드를 설명합니다.
+
+### 전통 음식
+1. **송편**  
+   - “예쁘게 빚으면 예쁜 아이를 낳는다” 전승담
+   - 가족이 둘러앉아 빚는 시간이 곧 전통이라는 메시지
+2. **전(부침)**  
+   - 명절 부엌의 소리/냄새 = 기억의 BGM 같은 요소로 서술
+3. **햇과일**  
+   - 제수(祭需)이자 농사 보고서라는 문화적 의미를 설명
+
+### 전통 놀이
+- **강강술래**: 풍년 기원 의식에서 온 집단 무용이자 공동체 리듬  
+- **씨름**: “우리 집 장사 누구냐”를 뽑는 가족 이벤트처럼 묘사  
+- **투호**: 단순 규칙으로도 온 가족의 승부욕을 자극하는 놀이
+
+## 프롬프트 (LLM 콘텐츠 생성 근거)
+
+아래 프롬프트를 사용해서 이 README와 App.vue 안의 문구(카피, 설명, 스토리)를 생성했습니다.
+
+```text
+한가위(추석) 테마의 랜딩 페이지를 만들려고 해.
+Vue + TypeScript + Vite 프로젝트의 메인 페이지(App.vue)에 바로 넣을 수 있는 형태로
+카피 문구와 섹션 구성을 만들어줘.
