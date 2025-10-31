@@ -5,9 +5,12 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   // GitHub Pages 배포를 위한 base path 설정
-  // 리포지토리 이름이 hw2인 경우 '/hw2/'로 설정
-  // 도메인 루트에 배포하는 경우 '/' 또는 생략
-  base: process.env.GITHUB_REPOSITORY 
-    ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/` 
-    : './',
+  // 개발 모드: '/' (로컬 개발 서버)
+  // 프로덕션 빌드 (GitHub Actions): 리포지토리 이름 기반 경로 (예: '/hw2/')
+  // 프로덕션 빌드 (로컬): 상대 경로 ('./')
+  base: process.env.NODE_ENV === 'production'
+    ? (process.env.GITHUB_REPOSITORY 
+        ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/` 
+        : './')
+    : '/',
 })
